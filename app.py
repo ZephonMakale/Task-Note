@@ -30,7 +30,7 @@ def index():
 
     else:
         tasks = Todo.query.order_by(Todo.date_created).all()
-        return render_template('index.html', tasks=tasks)
+        return render_template('index.html', font_url = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap', tasks=tasks)
 
 
 @app.route('/delete/<int:id>')
